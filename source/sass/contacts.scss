@@ -1,0 +1,23 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacts__item {
+  color: $blue;
+}
+
+.contacts__item-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+
+  vertical-align: top;
+  fill: $blue;
+}
+
+.contacts__button {
+  width: 180px;
+}
