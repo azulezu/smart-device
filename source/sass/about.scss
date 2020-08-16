@@ -1,0 +1,63 @@
+.about {
+  padding: 0 112px 0 220px;
+}
+
+.about__title {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  font-family: $roboto-condensed;
+  color: $medium-grey;
+}
+
+.about__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -180px;
+
+  width: 220px;
+  height: 317px;
+
+  background: url("../img/2005@1x.png") contain contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/2005@2x.png") contain no-repeat;
+  }
+}
+
+.about__brand-legend {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 21.5px;
+  font-family: $pt-mono;
+  color: $medium-grey;
+}
+
+.about-more-details {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 14px 13px 13px 12px;
+
+  color: $blue;
+
+  background-color: transparent;
+
+  with: 180px;
+}
+
+.about-more-details:hover,
+.about-more-details:focus,
+.about-more-details:active {
+  color: $white;
+
+  background-color: $blue;
+}

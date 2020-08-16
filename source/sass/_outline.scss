@@ -1,0 +1,18 @@
+body > * > * {
+  outline: 1px dotted white;
+}
+
+body > * > * > * {
+  outline: 1px solid green;
+  outline-offset: -2px;
+}
+
+body > * > * > * > * {
+  outline: 1px dashed magenta;
+  outline-offset: -4px;
+}
+
+body > * > * > * > * > * {
+  outline: 1px dotted red;
+  outline-offset: -6px;
+}

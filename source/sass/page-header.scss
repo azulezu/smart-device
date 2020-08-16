@@ -1,20 +1,121 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: $bkg-dark;
+  background: url("../img/bkg-header-wave-desktop@1x.png") center / cover no-repeat,
+  $bkg-dark;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/bkg-header-wave-desktop@2x.png") center / cover no-repeat,
+    $bkg-dark;
+  }
 }
 
-.page-header__img-container {
-  margin-left: auto;
-  width: 705px;
-  height: 515px;
-  @media (max-width: $tablet-width) {
-    width: 260px;
-    height: 340px;
+.page-header__wrapper {
+  max-width: 1411px;
+  margin: 0 auto;
+}
+
+.page-header__wrapper--menu {
+  display: flex;
+  justify-content: space-between;
+  min-height: 118px;
+}
+
+.page-header__wrapper--banner {
+  position: relative;
+
+  min-height: calc(878px - 118px);
+  overflow: hidden;
+
+  background: url("../img/bkg-poligons-desktop.svg") bottom center / auto 878px no-repeat;
+}
+
+.page-header__wrapper--anchor {
+  position: relative;
+}
+
+.page-header__nav {
+  display: flex;
+  align-items: center;
+  // min-width: 356px;
+}
+
+.page-header__nav-toggle {
+  width: 37px;
+  height: 13px;
+  margin-left: 118px;
+
+  cursor: pointer;
+}
+
+.page-header__contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: calc(100% - 356px);
+  padding-left: 30px;
+}
+
+.page-header__anchor-link {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+  // margin-top: auto;
+  font-family: $pt-mono;
+  color: $white;
+
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+// ==========================
+
+@media (max-width: $tablet-width) {
+  .page-header__wrapper--menu {
+    min-height: 84px;
+    padding: 0 25px;
   }
-  @media (max-width: $mobile-width) {
-    width: 294px;
-    height: 220px;
+
+  .page-header__wrapper--banner {
+    min-height: calc(686px - 84px);
+
+    background: url("../img/bkg-poligons-desktop.svg") bottom center / auto 686px no-repeat;
+  }
+
+  .page-header__wrapper--anchor {
+    display: none;
+  }
+
+  .page-header__nav {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .page-header__nav-toggle {
+    margin-left: auto;
+  }
+
+  .page-header__contacts {
+    display: flex;
+    flex: none;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: none;
+    margin-left: 37px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__wrapper--menu {
+    min-height: 67px;
+    padding: 0 16px;
+  }
+
+  .page-header__contacts {
+    margin-left: 27px;
   }
 }

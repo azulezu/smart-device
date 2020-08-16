@@ -1,0 +1,141 @@
+.banner__img-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+
+  width: 705px;
+  height: 515px;
+
+  @media (max-width: $tablet-width) {
+    right: 0;
+    left: auto;
+
+    width: 260px;
+    height: 340px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 294px;
+    height: 220px;
+  }
+}
+
+.banner__content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner__title {
+  max-width: 718px;
+  margin: 0 0 0 -2px;
+  padding: 198px 0 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  font-family: $roboto-condensed;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.banner-lead {
+  position: relative;
+
+  width: 722px;
+  margin: 27px 0 0;
+  padding: 0 0 0 94px;
+
+  font-size: 20px;
+  line-height: 34px;
+  font-family: $pt-mono;
+  color: $white;
+  letter-spacing: 0.07em;
+}
+
+.banner-lead::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+
+  width: 66px;
+  height: 2px;
+
+  background-color: $white;
+}
+
+.banner__button {
+  display: flex;
+  justify-content: center;
+  max-width: 407px;
+  margin: 41px 0 0 94px;
+  padding: 18px 28px 16px;
+
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.banner__button-text--brief {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .banner__title {
+    max-width: 470px;
+    margin: 104px 0 0 63px;
+    padding: 0;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .banner-lead {
+    max-width: 356px;
+    margin: 40px 0 0 54px;
+    padding: 0 0 0 60px;
+
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .banner-lead::before {
+    top: 9px;
+    left: 11px;
+
+    width: 33px;
+  }
+
+  .banner__button {
+    max-width: 379px;
+    margin: 41px 0 0 114px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .banner-lead {
+    width: 245px;
+    padding: 0 0 0 66px;
+
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0;
+  }
+
+  .banner-lead::before {
+    content: "";
+
+    width: 33px;
+  }
+
+
+  .banner__button-text--long {
+    display: none;
+  }
+
+  .banner__button-text--brief {
+    display: block;
+  }
+}

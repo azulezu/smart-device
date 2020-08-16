@@ -1,43 +1,47 @@
 @font-face {
-  font-family: "Roboto Condensed";
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto Condensed";
+
   font-display: swap;
   src: local("Roboto Condensed Regular"),
-    local("Roboto Condensed"),
-    url("../fonts/robotocondensed-400-normal.woff2") format("woff2"),
-    url("../fonts/robotocondensed-400-normal.woff") format("woff");
+  local("Roboto Condensed"),
+  url("../fonts/robotocondensed-400-normal.woff2") format("woff2"),
+  url("../fonts/robotocondensed-400-normal.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Roboto Condensed";
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+
   font-display: swap;
   src: local("Roboto Condensed Bold"),
-    local("Roboto Condensed"),
-    url("../fonts/robotocondensed-700-normal.woff2") format("woff2"),
-    url("../fonts/robotocondensed-700-normal.woff") format("woff");
+  local("Roboto Condensed"),
+  url("../fonts/robotocondensed-700-normal.woff2") format("woff2"),
+  url("../fonts/robotocondensed-700-normal.woff") format("woff");
 }
 
 @font-face {
-  font-family: "PT Mono";
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  font-family: "PT Mono";
+
   font-display: swap;
   src: local("PT Mono Regular"),
-    local("PT Mono"),
-    url("../fonts/ptmono-400-normal.woff2") format("woff2"),
-    url("../fonts/ptmono-400-normal.woff") format("woff");
+  local("PT Mono"),
+  url("../fonts/ptmono-400-normal.woff2") format("woff2"),
+  url("../fonts/ptmono-400-normal.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Roboto";
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+
   font-display: swap;
   src: local("Roboto Regular"),
-    local("Roboto"),
-    url("../fonts/roboto-500-normal.woff2") format("woff2"),
-    url("../fonts/roboto-500-normal.woff") format("woff");
+  local("Roboto"),
+  url("../fonts/roboto-500-normal.woff2") format("woff2"),
+  url("../fonts/roboto-500-normal.woff") format("woff");
 }

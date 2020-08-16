@@ -1,0 +1,15 @@
+.page-content__advantages {
+  max-width: 1416px;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+  .page-content__advantages {
+    // ????????? скролл
+    max-width: 100%;
+  }
+}
+//
+// @media (max-width: $mobile-width) {
+//
+// }

@@ -1,7 +1,7 @@
 // TEXTS
 $roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
 $roboto: "Roboto", "Arial", sans-serif;
-$ptmono: "PT Mono", "Courier New", monospace;
+$pt-mono: "PT Mono", "Courier New", monospace;
 
 // COLORS
 $white: #ffffff;
@@ -10,10 +10,15 @@ $bright-blue: #19baff;
 $dark-grey:   #788891;
 $medium-grey: #666666;
 $light-grey:  #1b2d37;
-$bkg-dark:    #1b2931;
+$bright-grey: #ebebeb;
+$bkg-dark:    #1b2d37;
 $bkg-grey:    #26353d;
 $bkg-light:   #fafafa;
 
 // MAX DIMENSIONS
 $mobile-width: 767px;
 $tablet-width: 1023px;
+
+// RETINA
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

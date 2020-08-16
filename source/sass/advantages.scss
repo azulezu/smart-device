@@ -1,0 +1,123 @@
+.advantages {
+  padding: 0;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 112px auto 0;
+
+  padding: 0 30px;
+}
+
+.advantages__item {
+  padding: 50px 40px;
+  flex: 1 1 calc(50% - 90px / 2 - 2px);
+  // margin: 0 auto 30px;
+  margin-bottom: 30px;
+  border: 1px solid $bright-grey;
+  border-left: 3px solid $blue;
+  color: $blue;
+  background-color: $white;
+}
+
+.advantages__item:nth-child(2n + 1) {
+  margin-right: 0;
+}
+
+.advantages__item:nth-child(2n) {
+  margin-left: 30px;
+}
+
+.advantages__item:hover,
+.advantages__item:focus {
+  color: $white;
+  background-color: $blue;
+}
+
+.advantages__item svg {
+  display: block;
+  fill: $blue;
+  width: 35px;
+  height: 35px;
+}
+
+.advantages__item h3 {
+  color: inherit;
+  padding: 0;
+  margin: 25px 0 0;
+  font-family: $roboto-condensed;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+}
+
+.advantages__item p {
+  color: $medium-grey;
+  font-family: $pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.advantages__item:hover p,
+.advantages__item:focus p {
+  color: $white;
+}
+
+.advantages__item:hover svg,
+.advantages__item:focus svg {
+  fill: $white;
+}
+
+@media (max-width: $tablet-width) {
+  // .advantages {
+  //   padding: 0;
+  // }
+
+  .advantages__list {
+    margin-top: 54px;
+    padding-left: 0;
+  }
+
+  .advantages__item {
+    width: 345px;
+    padding: 24px 23px 12px;
+    border: 1px solid $bright-grey;
+    border-left: 2px solid $blue;
+  }
+
+  .advantages__item svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .advantages__item h3 {
+    max-width: 100%;
+    margin: 10px 0 0;
+  }
+
+  .advantages__item p {
+    margin: 8px 0 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .advantages__list {
+    margin-top: 37px;
+    padding: 0 14px 0 16px;
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    width: auto;
+    margin: 0;
+  }
+
+  .advantages__item:nth-child(2n),
+  .advantages__item:nth-child(2n + 1) {
+    margin: 0;
+  }
+
+}
