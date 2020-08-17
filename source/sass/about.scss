@@ -6,9 +6,10 @@
 
 .about__container {
   position: relative;
-  padding-left: 191px;
-  padding-bottom: 45px;
+
   min-height: 317px;
+  padding-bottom: 45px;
+  padding-left: 191px;
 }
 
 .about__container::before {
@@ -29,10 +30,11 @@
 
 .about__title {
   position: relative;
-  margin: 0;
-  padding: 0;
   top: -2px;
+
+  margin: 0;
   margin-bottom: 20px;
+  padding: 0;
 
   font-style: normal;
   font-weight: normal;
@@ -57,19 +59,23 @@
 }
 
 .about-more-details {
-  padding: 14px 13px 13px 12px;
-  color: $blue;
-  background-color: transparent;
-  min-width: 180px;
   position: absolute;
-  left: 191px;
   bottom: 12px;
+  left: 191px;
+
+  min-width: 180px;
+  padding: 14px 13px 13px 12px;
+
+  color: $blue;
+
+  background-color: transparent;
 }
 
-.about-more-details:hover,
+.about-more-details:active,
 .about-more-details:focus,
-.about-more-details:active {
+.about-more-details:hover {
   color: $white;
+
   background-color: $blue;
 }
 
@@ -79,14 +85,16 @@
   }
 
   .about__container {
-    padding-left: 188px;
     min-height: 362px;
+    padding-left: 188px;
   }
 
   .about__container::before {
     left: -25px;
+
     width: 244px;
     height: 362px;
+
     background: url("../img/2005-tablet@1x.png") left top / cover no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -97,7 +105,9 @@
   .about__title {
     top: 0;
     left: -2px;
+
     margin-bottom: 27px;
+
     font-size: 32px;
     line-height: 45px;
   }
@@ -111,11 +121,10 @@
   }
 
   .about-more-details {
-    left: 188px;
     bottom: 10px;
+    left: 188px;
   }
 }
-
 
 @media (max-width: $mobile-width) {
   .about {
@@ -123,9 +132,8 @@
   }
 
   .about__container {
-    padding: 0;
-    padding-right: 3px;
     min-height: auto;
+    padding: 0 3px 0 0;
   }
 
   .about__container::before {
@@ -134,7 +142,9 @@
 
   .about__title {
     left: 0;
+
     margin-bottom: 22px;
+
     font-size: 28px;
     line-height: 39px;
   }
@@ -153,6 +163,7 @@
 
   .about-more-details {
     position: static;
+
     display: inline-block;
     margin: 30px 0 0 -8px;
   }
