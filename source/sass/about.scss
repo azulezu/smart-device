@@ -1,12 +1,38 @@
+// PP 1920, 0x 20y | PP 770, 0x 20y | PP 320, 0x -27y
+
 .about {
-  padding: 0 112px 0 220px;
+  padding: 109px 123px 0 119px;
+}
+
+.about__container {
+  position: relative;
+  padding-left: 191px;
+  padding-bottom: 45px;
+  min-height: 317px;
+}
+
+.about__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+
+  width: 220px;
+  height: 317px;
+
+  background: url("../img/2005-desktop@1x.png") left top / cover no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/2005-desktop@2x.png") left top / cover no-repeat;
+  }
 }
 
 .about__title {
   position: relative;
-
   margin: 0;
   padding: 0;
+  top: -2px;
+  margin-bottom: 20px;
 
   font-style: normal;
   font-weight: normal;
@@ -14,22 +40,6 @@
   line-height: 51px;
   font-family: $roboto-condensed;
   color: $medium-grey;
-}
-
-.about__title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -180px;
-
-  width: 220px;
-  height: 317px;
-
-  background: url("../img/2005@1x.png") contain contain;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/2005@2x.png") contain no-repeat;
-  }
 }
 
 .about__brand-legend {
@@ -42,22 +52,108 @@
   color: $medium-grey;
 }
 
+.about__brand-legend + .about__brand-legend {
+  padding-top: 22px;
+}
+
 .about-more-details {
-  display: inline-block;
-  margin-top: 36px;
   padding: 14px 13px 13px 12px;
-
   color: $blue;
-
   background-color: transparent;
-
-  with: 180px;
+  min-width: 180px;
+  position: absolute;
+  left: 191px;
+  bottom: 12px;
 }
 
 .about-more-details:hover,
 .about-more-details:focus,
 .about-more-details:active {
   color: $white;
-
   background-color: $blue;
+}
+
+@media (max-width: $tablet-width) {
+  .about {
+    padding: 55px 20px 0 24px;
+  }
+
+  .about__container {
+    padding-left: 188px;
+    min-height: 362px;
+  }
+
+  .about__container::before {
+    left: -25px;
+    width: 244px;
+    height: 362px;
+    background: url("../img/2005-tablet@1x.png") left top / cover no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/2005-tablet@2x.png") left top / cover no-repeat;
+    }
+  }
+
+  .about__title {
+    top: 0;
+    left: -2px;
+    margin-bottom: 27px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .about__brand-legend + .about__brand-legend {
+    padding-top: 26px;
+  }
+
+  .about__brand-legend-extra {
+    display: none;
+  }
+
+  .about-more-details {
+    left: 188px;
+    bottom: 10px;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .about {
+    padding: 58px 5px 0 15px;
+  }
+
+  .about__container {
+    padding: 0;
+    padding-right: 3px;
+    min-height: auto;
+  }
+
+  .about__container::before {
+    display: none;
+  }
+
+  .about__title {
+    left: 0;
+    margin-bottom: 22px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about__brand-legend {
+    line-height: 22px;
+  }
+
+  .about__brand-legend + .about__brand-legend {
+    padding-top: 38px;
+  }
+
+  .about__brand-legend-extra {
+    display: none;
+  }
+
+  .about-more-details {
+    position: static;
+    display: inline-block;
+    margin: 30px 0 0 -8px;
+  }
 }

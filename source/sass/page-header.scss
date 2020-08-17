@@ -1,15 +1,15 @@
 .page-header {
   background: url("../img/bkg-header-wave-desktop@1x.png") center / cover no-repeat,
-  $bkg-dark;
+    $bkg-dark;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background: url("../img/bkg-header-wave-desktop@2x.png") center / cover no-repeat,
-    $bkg-dark;
+      $bkg-dark;
   }
 }
 
 .page-header__wrapper {
-  max-width: 1411px;
+  max-width: 1412px;
   margin: 0 auto;
 }
 
