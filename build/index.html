@@ -166,6 +166,111 @@
     </div>
     </section>
     <!-- end => about  -->
+
+    <!-- goods  -->
+    <section class="goods">
+      <div class="goods__wrapper page-content__goods">
+        <h2 class="goods__title">Smart Device предлагает следующие товары и услуги</h2>
+        <ul class="goods__list  no-list-default">
+          <li class="goods__item">
+            <a href="#" class="goods__item-link">
+              <div class="goods__item-img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/pcb-mobile@1x.webp 1x, img/pcb-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/pcb-tablet@1x.webp 1x, img/pcb-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/pcb-desktop@1x.webp 1x, img/pcb-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/pcb-mobile@1x.png 1x, img/pcb-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/pcb-tablet@1x.png 1x, img/pcb-tablet@2x.png 2x">
+
+                  <img src="img/pcb-desktop@1x.png" srcset="img/pcb-desktop@2x.png 2x" width="370" height="620" alt="Заготовка печатной платы обрабатывается в станке">
+                </picture>
+              </div>
+              <h3 class="goods__item-title">Производство
+                печатных плат</h3>
+            </a>
+          </li>
+
+          <li class="goods__item">
+            <a href="#" class="goods__item-link">
+              <div class="goods__item-img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/chip-mobile@1x.webp 1x, img/chip-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/chip-tablet@1x.webp 1x, img/chip-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/chip-desktop@1x.webp 1x, img/chip-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/chip-mobile@1x.png 1x, img/chip-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/chip-tablet@1x.png 1x, img/chip-tablet@2x.png 2x">
+
+                  <img src="img/chip-desktop@1x.png" srcset="img/chip-desktop@2x.png 2x" width="370" height="620" alt="Поверхностный монтаж микросхемы">
+                </picture>
+              </div>
+              <h3 class="goods__item-title">Монтаж печатных
+                плат</h3>
+            </a>
+          </li>
+
+          <li class="goods__item">
+            <a href="#" class="goods__item-link">
+              <div class="goods__item-img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/led-mobile@1x.webp 1x, img/led-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/led-tablet@1x.webp 1x, img/led-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/led-desktop@1x.webp 1x, img/led-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/led-mobile@1x.png 1x, img/led-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/led-tablet@1x.png 1x, img/led-tablet@2x.png 2x">
+
+                  <img src="img/led-desktop@1x.png" srcset="img/led-desktop@2x.png 2x" alt="Светодиодные ленты">
+                </picture>
+              </div>
+              <h3 class="goods__item-title">Комплектующие для светотехники</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end => goods  -->
+
+
+    <!-- feedback  -->
+    <section class="feedback">
+      <div class="page-content__feedback">
+        <div class="feedback__wrapper">
+          <h2 class="visually-hidden">Форма для обратной связи</h2>
+          <p class="feedback__title">Остались вопросы? Задайте их нам!</p>
+          <p class="feedback__subtitle">Мы проконсультируем Вас бесплатно</p>
+
+          <form class="=feedback-form" action="http://echo.htmlacademy.ru" method="post">
+
+            <div class="feedback-form__inner-wrap">
+              <p class="feedback-form__field">
+                <label class="feedback-form__label feedback-form__label--fio visually-hidden" for="feedback-name">Имя:</label>
+                <input class="feedback-form__input-text" id="feedback-name" type="text" name="feedback-name" value="" placeholder="Имя" required="">
+              </p>
+
+              <p class="feedback-form__field">
+                <label class="feedback-form__label feedback-form__label--phone visually-hidden" for="feedback-phone">Телефон</label>
+                <!-- placeholder="+7 ХХХ ХХХ ХХ ХХ" pattern="(\+7)?\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{2}\s?[0-9]{2}" -->
+                <input class="feedback-form__input-text feedback-form__input-text--phone" id="feedback-phone" type="tel" name="tel" value="" placeholder="Телефон" required="">
+              </p>
+            </div>
+
+            <div class="feedback-form__inner-wrap">
+                <textarea class="feedback-form__question" id="feedback-question" name="feedback-question" rows="4" cols="24" placeholder="Ваш вопрос"></textarea>
+            </div>
+
+            <div class="feedback-form__inner-wrap">
+              <button class="feedback-form__submit button" type="submit">Задать вопрос</button>
+              <p class="feedback-form__field">
+                <input type="checkbox" name="agreement" id="agreement" checked="" required="">
+                <label for="agreement">Я согласен на обработку  персональных данных</label>
+              </p>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+    <!-- end => feedback  -->
+
   </main>
 
 </body>

@@ -1,7 +1,7 @@
 @import "normalize.scss";
 @import "fonts";
 @import "global";
-// @import "_outline";
+@import "_outline";
 @import "scaffolding";
 @import "button";
 @import "sandwich";
@@ -12,6 +12,8 @@
 @import "banner";
 @import "advantages";
 @import "about";
+@import "goods";
+@import "feedback";
 
 // скрывает неготовые блоки
 @import "==work-progress";
