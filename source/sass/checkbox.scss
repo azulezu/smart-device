@@ -1,0 +1,21 @@
+@mixin checkbox($size, $border-color) {
+  position: relative;
+
+  display: block;
+  padding-left: calc(#{$size} * 2.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(#{$size} / 2);
+
+    width: $size;
+    height: $size;
+
+    background: transparent url("../img/check.svg") center no-repeat;
+    background-size: calc(#{$size} * 0.6) calc(#{$size} * 0.4);
+    border: 1px solid $border-color;
+    transform: translateY(-50%);
+  }
+}

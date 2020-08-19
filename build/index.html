@@ -238,32 +238,30 @@
           <p class="feedback__title">Остались вопросы? Задайте их нам!</p>
           <p class="feedback__subtitle">Мы проконсультируем Вас бесплатно</p>
 
-          <form class="=feedback-form" action="http://echo.htmlacademy.ru" method="post">
-
-            <div class="feedback-form__inner-wrap">
-              <p class="feedback-form__field">
+          <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
+            <p class="feedback-form__field feedback-form__field--name">
                 <label class="feedback-form__label feedback-form__label--fio visually-hidden" for="feedback-name">Имя:</label>
                 <input class="feedback-form__input-text" id="feedback-name" type="text" name="feedback-name" value="" placeholder="Имя" required="">
               </p>
 
-              <p class="feedback-form__field">
+              <p class="feedback-form__field feedback-form__field--phone">
                 <label class="feedback-form__label feedback-form__label--phone visually-hidden" for="feedback-phone">Телефон</label>
                 <!-- placeholder="+7 ХХХ ХХХ ХХ ХХ" pattern="(\+7)?\s?[0-9]{3}\s?[0-9]{3}\s?[0-9]{2}\s?[0-9]{2}" -->
                 <input class="feedback-form__input-text feedback-form__input-text--phone" id="feedback-phone" type="tel" name="tel" value="" placeholder="Телефон" required="">
               </p>
-            </div>
 
-            <div class="feedback-form__inner-wrap">
-                <textarea class="feedback-form__question" id="feedback-question" name="feedback-question" rows="4" cols="24" placeholder="Ваш вопрос"></textarea>
-            </div>
-
-            <div class="feedback-form__inner-wrap">
-              <button class="feedback-form__submit button" type="submit">Задать вопрос</button>
-              <p class="feedback-form__field">
-                <input type="checkbox" name="agreement" id="agreement" checked="" required="">
-                <label for="agreement">Я согласен на обработку  персональных данных</label>
+              <p class="feedback-form__field  feedback-form__field--question">
+                  <label class="feedback-form__label feedback-form__label--question visually-hidden" for="feedback-question">Ваш вопрос</label>
+                  <textarea class="feedback-form__question" id="feedback-question" name="feedback-question" rows="4" cols="24" placeholder="Ваш вопрос"></textarea>
               </p>
-            </div>
+
+                <div class="feedback-form__inner-wrap">
+                  <button class="feedback-form__submit button" type="submit">Задать вопрос</button>
+                  <p class="feedback-form__field feedback-form__field--checkbox">
+                    <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked="" required="">
+                    <label class="feedback-form__label feedback-form__label--question" for="agreement">Я согласен на обработку  персональных данных</label>
+                  </p>
+              </div>
           </form>
 
         </div>

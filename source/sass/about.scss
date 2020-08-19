@@ -1,7 +1,7 @@
 // PP 1920, 0x 20y | PP 770, 0x 20y | PP 320, 0x -27y
 
 .about {
-  padding: 109px 123px 0 119px;
+  padding: 109px 15px 60px 15px;
 }
 
 .about__container {
@@ -81,7 +81,7 @@
 
 @media (max-width: $tablet-width) {
   .about {
-    padding: 55px 20px 0 24px;
+    padding: 55px 20px 50px 24px;
   }
 
   .about__container {
@@ -128,7 +128,7 @@
 
 @media (max-width: $mobile-width) {
   .about {
-    padding: 58px 5px 0 15px;
+    padding: 58px 5px 30px 15px;
   }
 
   .about__container {
