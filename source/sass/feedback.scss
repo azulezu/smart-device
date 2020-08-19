@@ -32,7 +32,7 @@
   }
 }
 
-.feedback__container form {
+.feedback-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -90,7 +90,8 @@
 
 .feedback-form__field--name,
 .feedback-form__field--phone {
-  max-width: 48%;
+  width: 48%;
+  flex-grow: 0;
 }
 
 .feedback-form__field--question {
@@ -183,6 +184,10 @@ input[type="checkbox"]:focus + label {
     padding: 80px 25px 65px 25px;
   }
 
+  .feedback-form {
+    max-width: none;
+  }
+
   .feedback__wrapper {
     padding-left: 0;
 
@@ -218,7 +223,7 @@ input[type="checkbox"]:focus + label {
 
   .feedback-form__field--name,
   .feedback-form__field--phone {
-    max-width: 100%;
+    width: 100%;
   }
 
   .feedback-form__inner-wrap {
