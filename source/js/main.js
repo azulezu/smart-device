@@ -2,11 +2,11 @@
 (function () {
 
   var INPUTMASK_SELECTOR = '.feedback-form__field--phone input';
+  var PHONE_TEMPLATE = '+7(999) 999-9999';
   var SCROLL_SELECTOR = '.banner__button';
   var SCROLL_POSITION = 'feedback';
   var SCROLL_SPEED = 1000; // msec
   var SCROLL_STEPS_COUNT = 100;
-
 
   var setSmoothScroll = function (button, anchor) {
 
@@ -31,7 +31,7 @@
       var smoothTimeout = SCROLL_SPEED / SCROLL_STEPS_COUNT;
 
       setTimeout(function () {
-        window.scrollBy(0, step);
+        window.scrollBy(0, step, {behavior: 'smooth'});
         from = from + step;
         if (stepsCount === 0) {
           if (!isElementVisibleY(anchor)) {
@@ -62,7 +62,17 @@
     return;
   };
 
+  var setInputMask = function (inputElement, template) {
+    var phoneInputMask = new window.Inputmask({
+      mask: template,
+      placeholder: ' ',
+      jitMasking: true,
+    });
+    phoneInputMask.mask(inputElement);
+  };
+
   // ----------------------------------------------------
+  setInputMask(document.querySelector(INPUTMASK_SELECTOR), PHONE_TEMPLATE);
   setSmoothScroll(document.querySelector(SCROLL_SELECTOR),
       document.getElementById(SCROLL_POSITION));
 })();
