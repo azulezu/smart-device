@@ -14,16 +14,16 @@
 .feedback__wrapper::before {
   // фон растянут на размер контента содержащего элемента (здесь section)
   // нач. положение фона - правым краем по центру
-  // смещается пропорционально (2.25) растяжению содержащего элемента
-  // pointer-events - элемент некликабельный
+  // смещается пропорционально (3.25) растяжению содержащего элемента
+  // pointer-events - псевдоээлемент некликабельный
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: url("../img/paper_airplane_3d_model@1x.png") calc(50% - 511px / 2 - 40px) center / 511px 288px no-repeat, transparent;
-  transform: translateX(calc((1024px - 100%) / 2.25));
+  background: url("../img/paper_airplane_3d_model@1x.png") calc(50% - 511px / 2 - 80px) center / 511px 288px no-repeat, transparent;
+  transform: translateX(calc((1024px - 100%) / 3.25));
 
   pointer-events: none;
 
