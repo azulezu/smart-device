@@ -3,8 +3,8 @@
 
   var SCROLL_SELECTOR = '.banner__button';
   var SCROLL_POSITION = 'feedback';
-  var SCROLL_SPEED = 10;
-  var SCROLL_STEP = 500;
+  var SCROLL_SPEED = 1000; // msec
+  var SCROLL_STEPS_COUNT = 50;
 
 
   var setSmoothScroll = function (button, anchor) {
@@ -22,14 +22,14 @@
     var scrollToPositionYInDocument = function (from, to, stepsCount) {
       var scrollLength = to - from;
       var step = scrollLength / stepsCount;
+
       // с замедлением в середине
-      var smoothTimeout = Math.round(SCROLL_SPEED * (1 - Math.sin(Math.PI / 2 * step / stepsCount)));
+      // var smoothTimeout = Math.round(SCROLL_SPEED / SCROLL_STEPS_COUNT * (Math.sin(Math.PI * stepsCount / SCROLL_STEPS_COUNT)));
+
+      // равномерный скролл
+      var smoothTimeout = SCROLL_SPEED / SCROLL_STEPS_COUNT;
 
       setTimeout(function () {
-        if (from >= to + window.innerHeight) { // +экран
-          return;
-        }
-
         window.scrollBy(0, step);
         from = from + step;
         scrollToPositionYInDocument(from, to, stepsCount - 1);
@@ -39,7 +39,7 @@
             button.dispatchEvent(new MouseEvent('click'));
           }
         }
-      }, smoothTimeout ? smoothTimeout : 1);
+      }, smoothTimeout);
     };
 
     var onButtonClick = function (evt) {
@@ -51,7 +51,7 @@
       }
       // если не работает, прокручиваем самостоятельно
       var positionToScroll = getPositionYInDocument(anchor);
-      scrollToPositionYInDocument(window.pageYOffset, positionToScroll, SCROLL_STEP);
+      scrollToPositionYInDocument(window.pageYOffset, positionToScroll, SCROLL_STEPS_COUNT);
     };
 
     if (button && anchor) {
@@ -59,22 +59,6 @@
     }
     return;
   };
-
-  // var pageHeader = document.querySelector('.page-header');
-  // var headerToggle = document.querySelector('.page-header__toggle');
-  //
-  // pageHeader.classList.remove('page-header--nojs');
-  //
-  // headerToggle.addEventListener('click', function () {
-  //   if (pageHeader.classList.contains('page-header--closed')) {
-  //     pageHeader.classList.remove('page-header--closed');
-  //     pageHeader.classList.add('page-header--opened');
-  //   } else {
-  //     pageHeader.classList.add('page-header--closed');
-  //     pageHeader.classList.remove('page-header--opened');
-  //   }
-  //
-  //   addUploadProcessing();
 
   // ----------------------------------------------------
   setSmoothScroll(document.querySelector(SCROLL_SELECTOR),
