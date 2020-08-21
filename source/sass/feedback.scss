@@ -32,12 +32,7 @@
   }
 }
 
-.feedback-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
+.feedback__form {
   max-width: 720px;
   margin-top: 50px;
 }
@@ -53,7 +48,7 @@
   text-transform: uppercase;
 }
 
-.feedback-subtitle {
+.feedback__subtitle {
   margin: 0 0 50px;
   padding: 0;
 
@@ -62,23 +57,16 @@
   font-family: $pt-mono;
 }
 
-.feedback-form__submit {
+.feedback__submit {
   flex: 0 1 270px;
   max-width: 270px;
-
-  border-color: $white;
 }
 
-.feedback-form__inner-wrap {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  align-items: center;
+.feedback__inner-wrap {
   margin-bottom: 40px;
 }
 
-.feedback-form__field {
-  flex-grow: 1;
+.feedback__field {
   margin-bottom: 40px;
 
   font-family: $pt-mono;
@@ -88,104 +76,33 @@
   line-height: 22px;
 }
 
-.feedback-form__field--name,
-.feedback-form__field--phone {
-  width: 48%;
-  flex-grow: 0;
-}
-
-.feedback-form__field--question {
-  width: 100%;
-}
-
-.feedback-form__field--checkbox {
+.feedback__agreement {
   flex: 1 1 300px;
   max-width: 300px;
   margin: 0;
   margin-left: 30px;
 }
 
-.feedback-form__field input,
-.feedback-form__field textarea {
-  width: 100%;
+.feedback__field input,
+.feedback__field textarea {
   padding: 16px 16px;
-
-  color: $white;
-  background-color: $bright-blue;
-  border: 1px solid transparent;
 }
 
-.feedback-form__field textarea {
+.feedback__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feedback__question {
   min-height: 154px;
+  resize: none;
 }
 
-.feedback-form__field input::placeholder,
-.feedback-form__field textarea::placeholder {
-  color: $white;
-}
-
-.feedback-form__field input:hover,
-.feedback-form__field textarea:hover {
-  border-color: $white;
-  outline: none;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.feedback-form__field input:focus,
-.feedback-form__field textarea:focus {
-  border-color: $white;
-  outline: none;
-  opacity: 1;
-}
-
-.feedback-form__field input:focus::placeholder,
-.feedback-form__field textarea:focus::placeholder {
-  opacity: 0;
-}
-
-.feedback-form__field--checkbox label {
-  @include checkbox(16px, $white);
-
-  &:hover::before {
-    opacity: 0.5;
-  }
-
-  &:focus::before,
-  &:active::before {
-    border-color: $white;
-    outline: 1px dotted red;
-    opacity: 1;
-  }
-}
-
-.feedback-form__field > input:not(:checked) + .feedback-form__label--question::before {
-  background: none;
-}
-
-.feedback-form__field--checkbox label:hover {
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.feedback-form__field--checkbox input:focus + label {
-  opacity: 1;
-}
-
-input[type="checkbox"]:focus + label {
-  outline: 1px solid $white;
-  outline-offset: 3px;
-  opacity: 1;
-}
 
 @media (max-width: $tablet-width) {
   .feedback {
     background-image: none;
     padding: 80px 25px 65px 25px;
-  }
-
-  .feedback-form {
-    max-width: none;
   }
 
   .feedback__wrapper {
@@ -212,38 +129,24 @@ input[type="checkbox"]:focus + label {
     line-height: 39px;
   }
 
-  .feedback__container form {
-    flex-direction: column;
-  }
-
   .feedback-form__field {
-    flex-grow: 1;
     margin-bottom: 30px;
   }
 
-  .feedback-form__field--name,
-  .feedback-form__field--phone {
-    width: 100%;
-  }
-
-  .feedback-form__inner-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  .feedback__inner-wrap {
     margin-bottom: 30px;
   }
 
-  .feedback-form__submit,
-  .feedback-form__field--checkbox {
-    flex: auto;
-    max-width: none;
-    width: 100%;
+  .feedback__submit,
+  .feedback__agreement {
     margin-bottom: 40px;
   }
 
-  .feedback-form__field--checkbox {
-    align-self: center;
-    max-width: 80%;
+  .feedback__question {
+    min-height: none;
+  }
+
+  .feedback__agreement label {
+    max-width: 100%;
   }
 }

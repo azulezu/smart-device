@@ -1,7 +1,7 @@
 'use strict';
 (function () {
 
-  var INPUTMASK_SELECTOR = '.feedback-form__field--phone input';
+  var INPUTMASK_SELECTOR = 'input[type="tel"]';
   var PHONE_TEMPLATE = '+7(999) 999-9999';
   var SCROLL_SELECTOR = '.banner__button';
   var SCROLL_POSITION = 'feedback';
@@ -62,17 +62,21 @@
     return;
   };
 
-  var setInputMask = function (inputElement, template) {
-    var phoneInputMask = new window.Inputmask({
-      mask: template,
-      placeholder: ' ',
-      jitMasking: true,
+  var setInputMask = function (inputElements, template) {
+    let phoneInputMasks = [];
+    inputElements.forEach(function (inputElement) {
+      var phoneInputMask = (new window.Inputmask({
+        mask: template,
+        placeholder: ' ',
+        jitMasking: true,
+      }));
+      phoneInputMask.mask(inputElement);
+      phoneInputMasks.push(phoneInputMask);
     });
-    phoneInputMask.mask(inputElement);
   };
 
   // ----------------------------------------------------
-  setInputMask(document.querySelector(INPUTMASK_SELECTOR), PHONE_TEMPLATE);
+  setInputMask(document.querySelectorAll(INPUTMASK_SELECTOR), PHONE_TEMPLATE);
   setSmoothScroll(document.querySelector(SCROLL_SELECTOR),
       document.getElementById(SCROLL_POSITION));
 })();
