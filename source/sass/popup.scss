@@ -1,0 +1,90 @@
+.popup {
+  position: relative;
+  width: 100%;
+  // color: $white;
+  // background: $blue;
+  padding: 100px 0 75px;
+}
+
+.popup__wrapper {
+  padding: 40px;
+
+  color: $white;
+  background: $blue;
+  // width: 100%;
+  max-width: 490px;
+}
+
+.popup__form {
+  // margin-top: 50px;
+}
+
+.popup__title {
+  margin: 0 0 10px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  font-family: $roboto-condensed;
+  text-transform: uppercase;
+}
+
+.popup__subtitle {
+  margin: 0 0 50px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $pt-mono;
+}
+
+.popup__submit {
+  // flex-grow: 1;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.popup__field {
+  margin-bottom: 30px;
+
+  font-family: $pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.popup__agreement {
+  margin: 0;
+}
+
+.popup__field input,
+.popup__field textarea {
+  padding: 16px 16px;
+}
+
+.popup__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popup__question {
+  min-height: 104px;
+  resize: none;
+}
+
+@media (max-width: $mobile-width) {
+  .popup-form__field {
+    margin-bottom: 22px;
+  }
+
+  .popup__submit,
+  .popup__agreement {
+    //
+  }
+
+  .popup__question {
+    // min-height: none;
+  }
+}
