@@ -19,6 +19,8 @@
   var SCROLL_SPEED = 1000; // msec
   var SCROLL_STEPS_COUNT = 100;
 
+  var ACCORDION_SELECTOR = '.accordion__container';
+
   var setSmoothScroll = function (button, anchor) {
 
     var isElementVisibleY = function (element) {
@@ -233,6 +235,40 @@
   }; // setInputMask
 
   // ----------------------------------------------------
+  var setAccordion = function (accordion) {
+    var inputElements = [];
+
+    var rollUp = function (radios) {
+      var unSelectedBtn = null;
+      var selectedBtn = null;
+      radios.forEach(function (radio) {
+        if (!radio.checked) {
+          unSelectedBtn = radio;
+        } else {
+          selectedBtn = radio;
+        }
+      });
+      selectedBtn.removeAttribute('checked');
+      unSelectedBtn.setAttribute('checked', 'checked');
+    };
+
+    var accordionElement = document.querySelector(accordion);
+    if (!accordionElement) {
+      return;
+    }
+    inputElements = accordionElement.querySelectorAll(accordion + ' input');
+    inputElements.forEach(function (inputElement) {
+      var id = inputElement.id;
+      var labelElement = accordionElement.querySelector('label[for=' + id + ']');
+      if (labelElement) {
+        labelElement.addEventListener('click', function () {
+          rollUp(inputElements);
+        });
+      }
+    });
+  };
+
+  // ----------------------------------------------------
   var overlay = document.querySelector(OVERLAY);
   var body = document.querySelector('body');
   var isStorageSupport = checkStorageSupport();
@@ -242,4 +278,5 @@
       document.getElementById(SCROLL_POSITION));
   setFeedback(document.querySelector(FEEDBACK + ' ' + 'form'));
   setModal(document.querySelector(MODAL_LINK), document.querySelector(MODAL_WINDOW));
+  setAccordion(ACCORDION_SELECTOR);
 })();
