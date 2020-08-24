@@ -1,30 +1,29 @@
 .footer {
-  background-color: $bkg-light;
   padding: 50px 25px;
+  background-color: $bkg-light;
 }
 
 .footer__content {
-  display: flex;
   position: relative;
+  display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   align-items: center;
-
-  font-family: $pt-mono;
+  font-weight: normal;
   font-size: 15px;
   line-height: 25px;
-  font-weight: normal;
+  font-family: $pt-mono;
   color: $bkg-dark;
 
   &::after,
   &::before {
     content: "";
+    display: none;
     width: 100%;
     height: 1px;
+    margin: 30px 0;
     background-color: $grey;
     opacity: 0.5;
-    margin: 30px 0;
-    display: none;
   }
 
   &::after {
@@ -38,65 +37,64 @@
 }
 
 .footer__content h2 {
-  font-family: $roboto-condensed;
+  margin: 0;
   font-weight: normal;
   font-size: 15px;
   line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: $roboto-condensed;
   color: $bkg-dark;
-  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.footer__content p,
-.footer__content a {
+.footer__content a,
+.footer__content p {
   opacity: 0.5;
 }
 
 .footer__content a {
-  cursor: pointer;
   display: block;
   color: $bkg-dark;
+  cursor: pointer;
   opacity: 0.5;
 
   &:hover {
     color: $blue;
   }
 
-  &:focus,
-  &:active {
+  &:active,
+  &:focus {
     color: $blue;
     opacity: 1;
   }
 }
 
-.footer__socials,
-.footer__address {
-  flex-basis: 25%;
+.footer__address,
+.footer__socials {
   flex-grow: 1;
+  flex-basis: 25%;
 }
 
 .footer__container-copyright,
-.footer__copyright-info--secret,
-.footer__copyright-info--designer {
+.footer__copyright-info--designer,
+.footer__copyright-info--secret {
   flex-basis: calc(100% / 3);
 }
 
 .logo--footer {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
 }
 
 .footer__socials {
-  padding-top: 150px;
   min-width: 216px;
+  padding-top: 150px;
 }
 
-
 .footer__nav {
-  flex-basis: 50%;
   flex-grow: 1;
+  flex-basis: 50%;
 }
 
 .footer__nav-menu {
@@ -104,10 +102,10 @@
 }
 
 .footer__container-copyright {
-  order: 2;
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  order: 2;
   margin-right: auto;
 }
 
@@ -118,8 +116,8 @@
 .footer__copyright-info {
   font-size: 13px;
   line-height: 24px;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .footer__copyright-info--secret {
@@ -127,11 +125,11 @@
 }
 
 .footer__copyright-info--designer {
-  flex-basis: auto;
   flex-grow: 0;
-  white-space: nowrap;
-  margin-left: auto;
+  flex-basis: auto;
   order: 4;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 @media (max-width: $tablet-width) {
@@ -158,24 +156,25 @@
     flex-basis: calc(100% / 3);
   }
 
-  .footer__nav,
-  .footer__address {
+  .footer__address,
+  .footer__nav {
     flex-basis: 50%;
   }
 
   .logo--footer {
-    order: 1;
     position: static;
-    left: unset;
     top: unset;
-    flex-basis: calc(100% / 3);
+    left: unset;
+
     flex-grow: 1;
+    flex-basis: calc(100% / 3);
+    order: 1;
   }
 
   .footer__socials {
     order: 3;
-    padding-top: 0;
     min-width: unset;
+    padding-top: 0;
   }
 
   .footer__nav {
@@ -224,13 +223,12 @@
 
   .footer__content > * {
     flex: auto;
-    // order: 0;
     margin-bottom: 24px;
-    // width: 100%;
   }
 
   .logo--footer {
     position: static;
+
     flex: none;
     height: 150px;
   }
@@ -241,12 +239,13 @@
   }
 
   .footer__copyright-info--designer {
-    white-space: normal;
     margin-left: 0;
+
+    white-space: normal;
   }
 
-  .footer__nav,
-  .footer__address {
+  .footer__address,
+  .footer__nav {
     align-self: flex-start;
   }
 
@@ -254,27 +253,28 @@
     margin-bottom: 0;
   }
 
-  .footer__nav-menu-item:last-child,
-  .footer__address-phone-list:last-child {
+  .footer__address-phone-list:last-child,
+  .footer__nav-menu-item:last-child {
     padding-bottom: 20px;
+  }
+
+  .footer__accordion-item {
+    width: 100%;
   }
 
   .footer__accordion-item label {
     min-height: 70px;
     vertical-align: middle;
+    cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
+      top: calc(50% - 8px);
+      right: 0;
       width: 16px;
       height: 16px;
-      right: 0;
-      top: calc(50% - 8px);
     }
-  }
-
-  .footer__accordion-item {
-    width: 100%;
   }
 
   .footer__accordion-item label > h2 {
