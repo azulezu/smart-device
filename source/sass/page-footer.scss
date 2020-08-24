@@ -1,0 +1,10 @@
+.page-footer {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer {
+    max-width: 100%;
+  }
+}

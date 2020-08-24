@@ -1,5 +1,4 @@
 .popup {
-  position: relative;
   width: 100%;
   // color: $white;
   // background: $blue;
@@ -8,6 +7,8 @@
 
 .popup__wrapper {
   padding: 40px;
+  margin: 0 auto;
+  position: relative;
 
   color: $white;
   background: $blue;

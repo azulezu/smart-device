@@ -1,0 +1,36 @@
+.socials__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.socials__item {
+  margin: 0;
+}
+
+.socials__item + .socials__item {
+  margin-left: 26px;
+}
+
+.socials__link {
+  display: block;
+  width: 28px;
+  height: 28px;
+
+  &:hover .socials__icon,
+  &:focus .socials__icon,
+  &:active .socials__icon {
+    fill: $blue;
+  }
+}
+
+.socials__icon {
+  fill: $grey;
+}
+
+@media (max-width: $tablet-width) {
+  .socials__list {
+    justify-content: flex-end;
+  }
+}

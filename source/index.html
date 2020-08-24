@@ -83,7 +83,6 @@
         </div>
       </div>
 
-      <!-- ❔ 👀 scrollIntoView( , smooth) то, что требуется? -->
       <div class="page-header__wrapper page-header__wrapper--anchor">
           <a href="#advantages" class="page-header__anchor-link">Скролл вниз</a>
       </div>
@@ -198,7 +197,6 @@
     </section>
     <!-- end => goods  -->
 
-
     <!-- feedback  -->
     <section class="feedback" id="feedback">
       <div class="page-content__feedback">
@@ -210,17 +208,17 @@
           <form class="form form--feedback feedback__form" action="http://echo.htmlacademy.ru" method="post">
             <p class="form__field form__field--short form__field--feedback feedback__name">
                 <label class="visually-hidden" for="feedback-name">Имя:</label>
-                <input id="feedback-name" type="text" name="feedback-name" value="" placeholder="Имя" inputmode="text" required>
+                <input id="feedback-name" type="text" name="userName" value="" placeholder="Имя" inputmode="text" required>
               </p>
 
               <p class="form__field form__field--short form__field--feedback feedback__phone">
                 <label class="visually-hidden" for="feedback-phone">Телефон</label>
-                <input id="feedback-phone" type="tel" name="tel" value="" placeholder="Телефон" maxlength="16" minlength="16" pattern="/^\+7\([0-9]{3}\) [0-9]{3}\-[0-9]{4}$/" inputmode="tel" required>
+                <input id="feedback-phone" type="tel" name="tel" value="" placeholder="Телефон" maxlength="10" minlength="10" pattern="[0-9]{10}" required>
               </p>
 
               <p class="form__field form__field--feedback feedback__question">
                   <label class="visually-hidden" for="feedback-question">Ваш вопрос</label>
-                  <textarea id="feedback-question" name="feedback-question" rows="4" cols="24" placeholder="Ваш вопрос" inputmode="verbatim"></textarea>
+                  <textarea id="feedback-question" name="question" rows="4" cols="24" placeholder="Ваш вопрос" inputmode="verbatim"></textarea>
               </p>
 
                 <div class="form__inner-wrap feedback__inner-wrap">
@@ -236,45 +234,141 @@
       </div>
     </section>
     <!-- end => feedback  -->
-
-    <!-- popup  -->
-    <div class="modal modal__overlay js-class__remove">
-      <div class="modal__content">
-      <section class="popup">
-        <div class="popup__wrapper ">
-          <h2 class="visually-hidden">Форма обратной связи</h2>
-          <p class="popup__title">Закажите звонок</p>
-          <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-
-          <form class="form form--popup popup__form" action="http://echo.htmlacademy.ru" method="post">
-            <p class="form__field form__field--popup popup__name">
-              <label class="visually-hidden" for="popup-name">Имя:</label>
-              <input id="popup-name" type="text" name="popup-name" value="" placeholder="Имя" inputmode="text" required>
-            </p>
-
-            <p class="form__field form__field--popup popup__phone">
-              <label class="visually-hidden" for="popup-phone">Телефон</label>
-              <input id="popup-phone" type="tel" name="tel" value="" placeholder="Телефон" maxlength="16" minlength="16" inputmode="tel" /^\+7\([0-9]{3}\) [0-9]{3}\-[0-9]{4}$/ required>
-            </p>
-
-            <p class="form__field form__field--popup popup__question">
-              <label class="visually-hidden" for="popup-question">Ваш вопрос</label>
-              <textarea id="popup-question" name="popup-question" rows="4" cols="24" placeholder="Ваш вопрос" inputmode="verbatim"></textarea>
-            </p>
-
-            <button class="form__submit popup__submit button" type="submit">Отправить</button>
-            <p class="form__field form__field--checkbox form__field--popup popup__agreement">
-              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" checked required>
-              <label for="agreement">Я согласен на обработку персональных данных</label>
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-- end => popup  -->
-
   </main>
 
+  <footer class="footer">
+    <section class="page-footer">
+      <div class="footer__content">
+        <a class="logo logo--footer">
+          <div class="logo__for_ie_img_wrapper">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/logo-mobile@1x.webp 1x, img/logo-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/logo-tablet@1x.webp 1x, img/logo-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-desktop@1x.webp 1x, img/logo-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/logo-mobile@1x.png 1x, img/logo-mobile@2x.png 2x">
+              <source media="(max-width: 1023px)" srcset="img/logo-tablet@1x.png 1x, img/logo-tablet@2x.png 2x">
+
+              <img src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" width="202" height="52" alt="Smart Device. Умные технологии">
+            </picture>
+          </div>
+        </a>
+        <section class="footer__socials socials">
+          <ul class="socials__list no-list-default">
+            <li class="socials__item">
+              <a class="socials__link socials__link--fb" href="#">
+                <svg class="socials__icon socials__icon--fb" width="26" height="28">
+                  <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                </svg>
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--tw" href="#">
+                <svg class="socials__icon socials__icon--ok" width="26" height="26">
+                  <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+                </svg>
+                <span class="visually-hidden">Одноклассники</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--tw" href="#">
+                <svg class="socials__icon socials__icon--vk" width="26" height="26">
+                  <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <nav class="footer__nav">
+          <h2>Разделы сайта</h2>
+          <ul class="footer__nav-menu no-list-default">
+            <li class="footer__nav-menu-item">
+              <a href="#" class="footer__nav-menu-link">О компании</a>
+            </li>
+            <li class="footer__nav-menu-item">
+              <a href="#" class="footer__nav-menu-link">Продукты/a>
+            </li>
+            <li class="footer__nav-menu-item">
+              <a href="#" class="footer__nav-menu-link">Производство печатных плат</a>
+            </li>
+            <li class="footer__nav-menu-item">
+              <a href="#" class="footer__nav-menu-link">Монтаж печатных плат/a>
+            </li>
+            <li class="footer__nav-menu-item">
+              <a href="#" class="footer__nav-menu-link">Комплектующие</a>
+            </li>
+            <li class="footer__nav-menu-item">
+              <a href="#" class="footer__nav-menu-link">Доставка/a>
+            </li>
+            <li class="footer__nav-menu-item">
+              <a href="#" class="footer__nav-menu-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__address">
+          <h2>Наш офис</h2>
+          <p>г. Мытищи, Олимпийский проспект, д.10</p>
+          <ul class="footer__address-phone-list no-list-default">
+            <li>
+              <a class="" href="tel:+7495005252">+7 (495) 589-40-50</a>
+            </li>
+            <li>
+              <a class="" href="tel:+79250038767">+7 (925) 003-87-67</a>
+            </li>
+            <li>
+              <a class="" href="tel:+792692608079">+7 (926) 926-080-79</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__container-copyright">
+          <p class="footer__copyright-info footer__copyright-info--protect">Все права защищены</p>
+          <p class="footer__copyright-info footer__copyright-info--brand">1999-2018 SD Service Devices</p>
+        </div>
+        <a class="footer__copyright-info footer__copyright-info--secret">Условия конфиденциальности</a>
+        <a class="footer__copyright-info footer__copyright-info--designer">Developed by wow studio</a>
+      </div>
+    </section>
+  </footer>
+
+  <!-- popup  -->
+  <section class="modal popup">
+    <div class="popup__wrapper">
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть окно заказа звонка</span>
+      </button>
+
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <p class="popup__title">Закажите звонок</p>
+      <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+      <form class="form form--popup popup__form" action="http://echo.htmlacademy.ru" method="post">
+        <p class="form__field form__field--popup popup__name">
+          <label class="visually-hidden" for="popup-name">Имя:</label>
+          <input id="popup-name" type="text" name="userName" value="" placeholder="Имя" inputmode="text" required>
+        </p>
+
+        <p class="form__field form__field--popup popup__phone">
+          <label class="visually-hidden" for="popup-phone">Телефон</label>
+          <input id="popup-phone" type="tel" name="tel" value="" placeholder="Телефон" maxlength="10" minlength="10" pattern="[0-9]{10}" required>
+        </p>
+
+        <p class="form__field form__field--popup popup__question">
+          <label class="visually-hidden" for="popup-question">Ваш вопрос</label>
+          <textarea id="popup-question" name="question" rows="4" cols="24" placeholder="Ваш вопрос" inputmode="verbatim"></textarea>
+        </p>
+
+        <button class="form__submit popup__submit button" type="submit">Отправить</button>
+        <p class="form__field form__field--checkbox form__field--popup popup__agreement">
+          <input class="visually-hidden" type="checkbox" name="agreement" id="popup-agreement" checked required>
+          <label for="popup-agreement">Я согласен на обработку персональных данных</label>
+        </p>
+      </form>
+    </div>
+  </section>
+  <!-- end => popup  -->
+
+  <div class="overlay"></div>
   <script src="js/inputmask.js"></script>
   <script src="js/main.js"></script>
 </body>
