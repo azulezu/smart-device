@@ -238,7 +238,7 @@
 
   <footer class="footer">
     <section class="page-footer">
-      <div class="footer__content">
+      <div class="footer__content accordion__container">
         <a class="logo logo--footer">
           <div class="logo__for_ie_img_wrapper">
             <picture>
@@ -280,9 +280,10 @@
             </li>
           </ul>
         </section>
-        <nav class="footer__nav">
-          <h2>Разделы сайта</h2>
-          <ul class="footer__nav-menu no-list-default">
+        <nav class="footer__nav footer__accordion-item">
+          <input id="accordion-nav" name="accordion" type="radio">
+          <label for="accordion-nav"><h2>Разделы сайта</h2></label>
+          <ul class="footer__nav-menu accordion__extra-content no-list-default">
             <li class="footer__nav-menu-item">
               <a href="#" class="footer__nav-menu-link">О компании</a>
             </li>
@@ -306,10 +307,12 @@
             </li>
           </ul>
         </nav>
-        <div class="footer__address">
-          <h2>Наш офис</h2>
-          <p>г. Мытищи, Олимпийский проспект, д.10</p>
-          <ul class="footer__address-phone-list no-list-default">
+        <div class="footer__address footer__accordion-item">
+          <input id="accordion-address" name="accordion" type="radio" checked>
+          <label for="accordion-address"><h2>Наш офис</h2></label>
+          <div class="accordion__extra-content">
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <ul class="footer__address-phone-list no-list-default">
             <li>
               <a class="" href="tel:+7495005252">+7 (495) 589-40-50</a>
             </li>
@@ -320,6 +323,7 @@
               <a class="" href="tel:+792692608079">+7 (926) 926-080-79</a>
             </li>
           </ul>
+          </div>
         </div>
         <div class="footer__container-copyright">
           <p class="footer__copyright-info footer__copyright-info--protect">Все права защищены</p>

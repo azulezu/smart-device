@@ -1,0 +1,45 @@
+
+.accordion__container input {
+  display: none;
+}
+
+@media (max-width: $mobile-width) {
+  .accordion__container label {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .accordion__container label:hover {
+    opacity: 0.5;
+  }
+
+  .accordion__container input:checked + label,
+  .accordion__container input:checked + label:hover {
+    opacity: 1;
+  }
+
+  .accordion__container label::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    right: 0.5em;
+    top: 0.5em;
+    background: url("../img/accordion-show.svg") center no-repeat;
+  }
+
+  .accordion__container input:checked + label::before {
+    background-image: url("../img/accordion-hide.svg");
+  }
+
+  .accordion__container .accordion__extra-content {
+    overflow: hidden;
+    height: 0;
+    border-bottom: 1px solid $grey;
+  }
+
+  .accordion__container input:checked ~ .accordion__extra-content {
+    height: auto;
+  }
+}
