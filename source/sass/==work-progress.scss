@@ -2,14 +2,14 @@
   display: none;
 }
 
-.advantages {
+.page-footer {
   display: none;
 }
 
-.about {
-  // display: none;
+.page-content > * {
+  display: none;
 }
 
 .goods {
-  display: none;
+  display: block;
 }
