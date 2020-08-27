@@ -1,8 +1,15 @@
 // PP 1920, 0x 20y | PP 770, 0x 20y | PP 320, 0x -27y
 
 .about {
-  padding: 109px 15px 60px 15px;
+  color: $bkg-dark;
+  background-color: $white;
+  // padding: 109px 15px 60px 15px;
 }
+
+// .goods__wrapper {
+//   max-width: 1200px;
+//   padding: 60px 15px 97px;
+// }
 
 .about__container {
   position: relative;
