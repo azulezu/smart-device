@@ -1,30 +1,23 @@
-// PP 1920, 0x 20y | PP 770, 0x 20y | PP 320, 0x -27y
-
 .about {
   color: $bkg-dark;
-  background-color: $white;
-  // padding: 109px 15px 60px 15px;
+  background-color: transparent;
 }
 
-// .goods__wrapper {
-//   max-width: 1200px;
-//   padding: 60px 15px 97px;
-// }
+.about__wrapper {
+  padding: 48px 15px 97px;
+}
 
 .about__container {
   position: relative;
-
   min-height: 317px;
-  padding-bottom: 45px;
-  padding-left: 191px;
+  padding-left: 180px;
 }
 
 .about__container::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -20px;
-
+  top: 2px;
+  left: -30px;
   width: 220px;
   height: 317px;
 
@@ -38,9 +31,7 @@
 .about__title {
   position: relative;
   top: -2px;
-
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   padding: 0;
 
   font-style: normal;
@@ -68,13 +59,11 @@
 .about-more-details {
   position: absolute;
   bottom: 12px;
-  left: 191px;
-
+  left: 180px;
   min-width: 180px;
   padding: 14px 13px 13px 12px;
 
   color: $blue;
-
   background-color: transparent;
 }
 
@@ -82,13 +71,12 @@
 .about-more-details:focus,
 .about-more-details:hover {
   color: $white;
-
   background-color: $blue;
 }
 
 @media (max-width: $tablet-width) {
-  .about {
-    padding: 55px 20px 50px 24px;
+  .about__wrapper {
+    padding: 22px 24px 77px 25px;
   }
 
   .about__container {
@@ -98,7 +86,6 @@
 
   .about__container::before {
     left: -25px;
-
     width: 244px;
     height: 362px;
 
@@ -110,10 +97,9 @@
   }
 
   .about__title {
-    top: 0;
-    left: -2px;
-
-    margin-bottom: 27px;
+    top: 3px;
+    left: -3px;
+    margin-bottom: 30px;
 
     font-size: 32px;
     line-height: 45px;
@@ -128,14 +114,14 @@
   }
 
   .about-more-details {
-    bottom: 10px;
+    bottom: 6px;
     left: 188px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .about {
-    padding: 58px 5px 30px 15px;
+  .about__wrapper {
+    padding: 12px 5px 65px 15px;
   }
 
   .about__container {
@@ -149,7 +135,6 @@
 
   .about__title {
     left: 0;
-
     margin-bottom: 22px;
 
     font-size: 28px;
@@ -170,7 +155,6 @@
 
   .about-more-details {
     position: static;
-
     display: inline-block;
     margin: 30px 0 0 -8px;
   }

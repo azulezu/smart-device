@@ -1,6 +1,6 @@
 .advantages {
   color: $medium-grey;
-  background-color: $white;
+  background-color: transparent;
 }
 
 .advantages__wrapper {
@@ -90,7 +90,7 @@
   .advantages__wrapper {
     min-width: unset;
     max-width: unset;
-    padding: 52px 25px 24px;
+    padding: 52px 25px 0;
   }
 
   .advantages__item {

@@ -1,6 +1,6 @@
 .page-content__wrapper {
-  background: url("../img/bkg-advantages_about-desktop.svg") no-repeat $white;
-  background-position: center;
+  background: url("../img/bkg-advantages_about-desktop.svg") center 37% no-repeat $white;
+  background-blend-mode: exclusion;
 }
 
 .page-content__container {
@@ -14,19 +14,6 @@
 
 /*
 
-.page-content__about {
-  // max-width: 1440px;
-  // min-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.page-content__goods {
-  min-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .page-content__feedback {
   // min-width: 1024px;
   max-width: 1440px;
@@ -38,13 +25,18 @@
 */
 
 @media (max-width: $tablet-width) {
+  .page-content__wrapper {
+    background-image: url("../img/bkg-advantages_about-tablet.svg");
+  }
+
   .page-content__container {
     min-width: unset;
     max-width: 100%;
   }
 }
 
-//
-// @media (max-width: $mobile-width) {
-//
-// }
+@media (max-width: $mobile-width) {
+  .page-content__wrapper {
+    background-image: url("../img/bkg-advantages_about-mobile.svg");
+  }
+}
